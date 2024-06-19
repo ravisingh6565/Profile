@@ -1,0 +1,37 @@
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c6a582;
+    padding: 4px;
+    width: auto;
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    padding: 10px 0;
+
+  }
+  
+  .navbar-container h3 {
+    color: white;
+    margin: 0 15px;
+    cursor: pointer;
+  }
+  
+  .navbar-container h3:hover {
+    color: #ff6347;
+    text-decoration: underline;
+  }
+  
+  .profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color:burlywood;
+   border: 2px solid rgb(210, 221, 247);
+  }
+  

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-box {
+  position: relative;
+  border-radius: 10px;
+  height: 86vh;
+  width: 70%;
+  border: 4px solid #4e4949;
+  background-color: rgba(104, 98, 98, 0.5);
+  backdrop-filter: blur(2px);
+  border: 4px solid rgba(36, 34, 34, 0.58);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  transition: background-color 0.3s ease;
+  left:230px;
+}
+
+.outer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.switch-input {
+  display: none;
+}
+
+.toggle-label {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 20px;
+  border-radius: 20px;
+  background: #303232;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.toggle-button {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.switch-input:checked + .toggle-label .toggle-button {
+  transform: translateX(20px);
+}
+
+.content {
+  display: flex;
+  width: 570px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.image-box {
+  height: 232px;
+  width: 200px;
+  border-radius: 12px;
+  padding: 3px;
+  background: #303131;
+}
+
+.image-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 12px;
+}
+
+.content .details {
+  width: 58%;
+  margin: 10px 0 20px 20px;
+  color: #092c3e;
+}
+
+.content .details .name {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.content .details .job {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.content .details p {
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+.content button {
+  display: block;
+  margin-top: 16px;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  background: #282a2b;
+  transition: all 0.3s ease;
+}
+
+.content button:hover {
+  transform: scale(0.97);
+}
+
+
+.dark-mode {
+  background-color: #1c1e1f;
+}
+
+.dark-mode .content {
+  background-color: #323233;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .toggle-label {
+  background: #fff;
+}
+
+.dark-mode .image-box {
+  background: #2e3132;
+}
+
+.dark-mode .content .details {
+  color: #fff;
+}
+
+.dark-mode .content button {
+  background: #fff;
+  color: #1c1e1f;
+}
+
+.dark-mode .media-icons i {
+  color: #fff;
+  opacity: 1;
+}
