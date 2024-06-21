@@ -9,8 +9,10 @@ const DescCard = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get('/'); // Fetching data from backend
-        setUserData(response.data.data.info); // Update state with fetched data
+        const response = await axios.get('http://localhost:3000/',{
+          params:{_id : "667333963e985250ea5ec0f1",},
+        }); 
+        setUserData(response.data.data.info); 
       } catch (error) {
         console.error('Error fetching user data:', error);
       }
@@ -20,7 +22,7 @@ const DescCard = () => {
   }, []);
 
   if (!userData) {
-    return <div>Loading...</div>; // Display loading message while fetching data
+    return <div>Loading...</div>; 
   }
 
   return (
@@ -30,7 +32,7 @@ const DescCard = () => {
         <p><strong>Username:</strong> {userData.username}</p>
         <p><strong>Job Profile:</strong> {userData.jobProfile}</p>
         <p><strong>Intro:</strong> {userData.intro}</p>
-        <p><strong>Image:</strong> <img src={userData.image} alt="Profile" /></p>
+       {/* <p><strong>Image:</strong> <img src={userData.image} alt="Profile" /></p> */}
         <p><strong>Interest:</strong> {userData.interest}</p>
         <p><strong>Hobby:</strong> {userData.hobby}</p>
         <p><strong>Qualification:</strong> {userData.qualification}</p>

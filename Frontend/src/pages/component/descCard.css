@@ -1,15 +1,17 @@
 .info-container {
-    margin-top: 12px;
-    margin-left: 20px;
-    width: 92%;
-    height: 53%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: auto; /* Ensure the content is scrollable if it exceeds the container height */
-  }
+  margin-top: 12px;
+  margin-left: 20px;
+  width: 92%;
+  height: 53%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(212, 96, 96, 0.4); /* Transparent black background */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto; /* Ensure the content is scrollable if it exceeds the container height */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+}
+
   
   h1 {
     text-align: center;

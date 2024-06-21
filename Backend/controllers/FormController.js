@@ -1,7 +1,7 @@
 const { query } = require("express");
 const FormModel = require("../models/FormModel.js");
 
-// Retrieve all information
+
 const getAllinfo = async (req, res) => {
   try {
     const info = await FormModel.find();
@@ -22,7 +22,7 @@ const getAllinfo = async (req, res) => {
   }
 };
 
-// Retrieve information by ID
+
 const getInfoById = async (req, res) => {
   const {_id} = req.query;
   console.log(_id)
@@ -45,10 +45,11 @@ const getInfoById = async (req, res) => {
   }
 };
 
-// Add new information
+
 const addInfo = async (req, res) => {
   try {
     const newInfo = await FormModel.create(req.body);
+    const newId =newInfo._id;
     console.log(newInfo);
 
     res.json({
@@ -56,6 +57,7 @@ const addInfo = async (req, res) => {
       results: 1,
       data: {
         info: newInfo,
+        id:newId,
       },
     });
   } catch (err) {

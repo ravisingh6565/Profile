@@ -33,7 +33,7 @@ const FormComponent = () => {
     try {
       const response = await axios.post('http://localhost:3000/infoForm', formData);
       console.log('Form submitted successfully:', response.data);
-      // Reset form or give user feedback on successful submission
+      
       setFormData({
         username: '',
         jobProfile: '',
